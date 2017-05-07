@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+
 
 @Component({
   selector: 'app-root',
