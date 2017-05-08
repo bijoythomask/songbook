@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdInputModule } from '@angular/material';
+import { MdSidenavModule } from '@angular/material';
+import { MdIconModule } from '@angular/material';
+import {MdButtonModule} from '@angular/material';
 
 import 'hammerjs';
 
@@ -18,7 +21,10 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdInputModule
+    MdInputModule,
+    MdSidenavModule,
+    MdIconModule,
+    MdButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

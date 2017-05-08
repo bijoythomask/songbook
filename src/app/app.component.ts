@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewEncapsulation } from '@angular/core';
 import { MdButtonModule , MdCheckboxModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
 
