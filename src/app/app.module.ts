@@ -7,14 +7,18 @@ import { MdInputModule } from '@angular/material';
 import { MdSidenavModule } from '@angular/material';
 import { MdIconModule } from '@angular/material';
 import {MdButtonModule} from '@angular/material';
+import {MdToolbarModule} from '@angular/material';
+import {MdListModule} from '@angular/material';
 
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { UserComponent } from './users/user/user.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,9 @@ import { AppComponent } from './app.component';
     MdInputModule,
     MdSidenavModule,
     MdIconModule,
-    MdButtonModule
+    MdButtonModule,
+    MdToolbarModule,
+    MdListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

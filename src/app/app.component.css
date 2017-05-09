@@ -1,6 +1,26 @@
-.example-form {
-  width: 500px;
+md-sidenav-layout.m2app-dark {
+  background: black;
 }
+
+.app-content {
+  padding: 20px;
+}
+
+.app-content md-card {
+  margin: 20px;
+}
+
+.app-sidenav {
+  padding: 10px;
+  min-width: 100px;
+}
+
+
+.app-toolbar-menu {
+  padding: 0 14px 0 14px;
+  /*color: white;*/
+}
+
 
 .example-full-width {
   width: 100%;
@@ -30,4 +50,9 @@
   position: absolute;
   right: 20px;
   bottom: 10px;
+}
+
+.app-sidenav {
+  padding: 10px;
+  min-width: 100px;
 }
