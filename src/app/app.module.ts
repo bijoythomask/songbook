@@ -10,6 +10,11 @@ import {MdButtonModule} from '@angular/material';
 import {MdToolbarModule} from '@angular/material';
 import {MdListModule} from '@angular/material';
 
+
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './common/in-memory-data.service';
+
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -30,7 +35,8 @@ import { UserComponent } from './users/user/user.component';
     MdIconModule,
     MdButtonModule,
     MdToolbarModule,
-    MdListModule
+    MdListModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   providers: [],
   bootstrap: [AppComponent]
