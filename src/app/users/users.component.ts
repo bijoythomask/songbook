@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from "./shared/user.service";
-import { User } from "./shared/user";
+import { UserService } from './shared/user.service';
+import { User } from './shared/user';
 
 @Component({
   selector: 'app-users',
@@ -10,7 +10,7 @@ import { User } from "./shared/user";
 })
 export class UsersComponent implements OnInit {
 
-  users : User[];
+  users: User[];
 
   constructor(
     private heroService: UserService
@@ -18,8 +18,7 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers();
-    console.log("Inside the ng init");
-    this.users.forEach(user => console.log(user));
+    console.log('Inside the ng init');
   }
 
   getUsers(): void {

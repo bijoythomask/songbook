@@ -10,6 +10,6 @@ import { MdInputModule } from '@angular/material';
 })
 export class AppComponent {
 
-  public isDarkTheme: boolean = false;
+  public isDarkTheme = false;
   
 }

@@ -9,21 +9,22 @@ import { MdIconModule } from '@angular/material';
 import {MdButtonModule} from '@angular/material';
 import {MdToolbarModule} from '@angular/material';
 import {MdListModule} from '@angular/material';
+import { RouterModule } from '@angular/router';
+
 
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './common/in-memory-data.service';
+import { InMemoryDataService } from './common/in-memory-data.service';
 
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { UserComponent } from './users/user/user.component';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UserComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,11 @@ import { UserComponent } from './users/user/user.component';
     MdButtonModule,
     MdToolbarModule,
     MdListModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    UsersModule,
+    RouterModule.forRoot([
+      {path : 'users' , redirectTo : '/users', pathMatch: 'full'}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
