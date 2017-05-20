@@ -40,7 +40,7 @@ import { UsersModule } from './users/users.module';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     UsersModule,
     RouterModule.forRoot([
-      {path : 'users' , redirectTo : '/users', pathMatch: 'full'}
+      {path : 'user' , redirectTo : '/users'}
     ])
   ],
   providers: [],

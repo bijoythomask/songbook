@@ -23,7 +23,7 @@ export class UsersComponent implements OnInit {
 
   getUsers(): void {
     this.heroService
-        .getHeroes()
+        .getUsers()
         .then(users => this.users = users);
   }
 

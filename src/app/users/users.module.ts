@@ -1,18 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserComponent } from './user/user.component';
+
+//Anglar material Dependency
+import { MdInputModule } from '@angular/material';
+import { MdSidenavModule } from '@angular/material';
+import { MdIconModule } from '@angular/material';
+import {MdButtonModule} from '@angular/material';
+import {MdToolbarModule} from '@angular/material';
+import {MdListModule} from '@angular/material';
+
+//Module Components
 import { UserListComponent } from './user-list/user-list.component';
 import { UsersComponent } from './users.component';
 import { UsersRoutingModule } from './users-routing.module';
 import { UserService } from './shared/user.service';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    MdInputModule,
+    MdSidenavModule,
+    MdIconModule,
+    MdButtonModule,
+    MdToolbarModule,
+    MdListModule,
   ],
-  declarations: [UserComponent, UserListComponent, UsersComponent],
+  declarations: [ UserListComponent, UsersComponent, UserRegistrationComponent],
   providers: [UserService]
 })
 export class UsersModule { }

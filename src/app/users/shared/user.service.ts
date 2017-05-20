@@ -8,15 +8,19 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class UserService {
 
-  private heroesUrl = 'api/heroes';  // URL to web api
+  private usersUrl = 'api/usersdata';  // URL to web api
 
   constructor(private http: Http) { }
 
-  getHeroes(): Promise<User[]> {
-    return this.http.get(this.heroesUrl)
+  getUsers(): Promise<User[]> {
+    return this.http.get(this.usersUrl)
                .toPromise()
                .then(response => response.json().data as User[])
                .catch(this.handleError);
+  }
+
+  private handleResponse(respose:any): Promise<any>{
+    return Promise.resolve(respose.data || '');
   }
   
   private handleError(error: any): Promise<any> {
