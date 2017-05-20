@@ -1,12 +1,10 @@
-<h4> Users </h4>
 <md-nav-list >
-
     <md-list-item *ngFor="let user of users"> 
 
         <button md-icon-button (click)="showInfo(link)">
             <md-icon>info</md-icon>
         </button>
-       test
+       
         <a md-line href="...">{{user.name}}</a>
 
         <button md-icon-button (click)="gotoDetails(user.id)">

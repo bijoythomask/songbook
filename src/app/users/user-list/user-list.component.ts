@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from "./../shared/user.service";
-import { User } from "./../shared/user";
+import { UserService } from './../shared/user.service';
+import { User } from './../shared/user';
 
 @Component({
   selector: 'app-user-list',
@@ -15,8 +15,7 @@ export class UserListComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    
-    this.userService.getUsers().then(users => this.users);
+    this.userService.getUsers().then(users => this.users = users);
   }
 
 }

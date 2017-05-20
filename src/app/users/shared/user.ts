@@ -1,7 +1,9 @@
+
+/**
+ * Model class for user
+ */
 export class User {
 
-    constructor(
-        public id: number,
-        public name: String
-    ){}
+     public id: number;
+     public name: String;
 }
