@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SongService } from "./../shared/song.service";
+import { Song } from "./../shared/song";
+
 @Component({
   selector: 'app-song-list',
   templateUrl: './song-list.component.html',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SongListComponent implements OnInit {
 
-  constructor() { }
+  songs: Song[];
+
+  constructor( private songService: SongService) { }
 
   ngOnInit() {
+    this.songService.getSongs().then(songs => this.songs = songs );
   }
 
 }

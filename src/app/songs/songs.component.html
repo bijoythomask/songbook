@@ -1,3 +1,24 @@
-<p>
-  songs works!
-</p>
+<md-toolbar color="warm">
+    <span>User Management</span>
+    <span class="example-spacer"></span>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+    <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+    <button md-menu-item routerLink="/user/registration" > 
+        <md-icon>add</md-icon>
+        <span>New</span>
+    </button>
+    <button md-menu-item >
+        <md-icon>refresh</md-icon>
+        <span>Refresh</span>
+    </button>
+    <button md-menu-item disabled >
+        <md-icon>notifications_off</md-icon>
+        <span>Disable</span>
+    </button>
+    </md-menu>
+</md-toolbar>
+
+<!--Router Outlet -->
+<router-outlet></router-outlet>

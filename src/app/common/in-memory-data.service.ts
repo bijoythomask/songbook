@@ -17,13 +17,13 @@ export class InMemoryDataService implements InMemoryDbService {
 
     let songs = [
       {id:1, title: 'Song1', language: 'English'},
-      {id:1, title: 'Song1', language: 'English'},
-      {id:1, title: 'Song1', language: 'English'},
-      {id:1, title: 'Song1', language: 'English'},
-      {id:1, title: 'Song1', language: 'English'},
-      {id:1, title: 'Song1', language: 'English'},
-      {id:1, title: 'Song1', language: 'English'},
-      {id:1, title: 'Song1', language: 'English'}
+      {id:2, title: 'Song2', language: 'English'},
+      {id:3, title: 'Song3', language: 'English'},
+      {id:4, title: 'Song4', language: 'English'},
+      {id:5, title: 'Song5', language: 'English'},
+      {id:6, title: 'Song6', language: 'English'},
+      {id:7, title: 'Song7', language: 'English'},
+      {id:8, title: 'Song8', language: 'English'}
     ];
 
     return {users,songs};

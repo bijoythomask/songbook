@@ -21,6 +21,7 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { UsersModule } from './users/users.module';
+import { SongsModule } from "./songs/songs.module";
 
 @NgModule({
   declarations: [
@@ -39,8 +40,10 @@ import { UsersModule } from './users/users.module';
     MdListModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     UsersModule,
+    SongsModule,
     RouterModule.forRoot([
-      {path : 'user' , redirectTo : '/users'}
+      {path : 'user' , redirectTo : '/users'},
+      {path : 'songs', redirectTo : '/songs'}
     ])
   ],
   providers: [],

@@ -1,3 +1,15 @@
-<p>
-  song-list works!
-</p>
+<md-nav-list >
+    <md-list-item *ngFor="let song of songs"> 
+
+        <button md-icon-button (click)="showInfo(link)">
+            <md-icon>info</md-icon>
+        </button>
+       
+        <a md-line href="...">{{song.title}}</a>
+
+        <button md-icon-button (click)="gotoDetails(user.id)">
+            <md-icon>edit</md-icon>
+        </button>        
+
+    </md-list-item>
+</md-nav-list>
