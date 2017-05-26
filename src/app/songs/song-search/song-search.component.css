@@ -1,0 +1,9 @@
+.search-text-box {
+ width: 100%;
+}
+.search-result {
+    background-color:white;
+}
+.search-result-item {
+    color: black;
+}

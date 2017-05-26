@@ -9,11 +9,13 @@ import {MdButtonModule} from '@angular/material';
 import {MdToolbarModule} from '@angular/material';
 import {MdListModule} from '@angular/material';
 import {MdMenuModule} from '@angular/material';
+import {MdCardModule} from '@angular/material';
 
 import { SongsRoutingModule } from './songs-routing.module';
 import { SongsComponent } from './songs.component';
 import { SongListComponent } from './song-list/song-list.component';
 import { SongService } from './shared/song.service';
+import { SongSearchComponent } from './song-search/song-search.component';
 
 
 @NgModule({
@@ -26,9 +28,10 @@ import { SongService } from './shared/song.service';
     MdButtonModule,
     MdToolbarModule,
     MdListModule,
-    MdMenuModule
+    MdMenuModule,
+    MdCardModule
   ],
-  declarations: [SongsComponent, SongListComponent],
+  declarations: [SongsComponent, SongListComponent, SongSearchComponent],
   providers: [ SongService ]
 })
 export class SongsModule { }
