@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy  } from '@angular/core';
 
 import { Subscription } from 'rxjs/Subscription';
+import { Observable } from 'rxjs/Observable';
 
-import { SongService } from "./../shared/song.service";
-import { Song } from "./../shared/song";
+import { SongService } from './../shared/song.service';
+import { Song } from './../shared/song';
 
 @Component({
   selector: 'app-song-list',
@@ -12,17 +13,17 @@ import { Song } from "./../shared/song";
 })
 export class SongListComponent implements OnInit, OnDestroy  {
 
-  songs: Song[];
+  songs: Observable<Song[]>;
 
   subscription: Subscription;
 
   constructor( private songService: SongService) { }
 
   ngOnInit() {
-    this.songService.getSongs().then(songs => this.songs = songs );
+    this.songs = this.songService.search('');
     this.subscription = this.songService.registerSerchEvent()
-        .subscribe(searchTerm => {
-          console.log(searchTerm);
+        .subscribe(event => {
+          this.songs = this.songService.search(event.searchTerm);
         });
   }
 

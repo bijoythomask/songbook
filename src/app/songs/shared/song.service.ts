@@ -29,7 +29,7 @@ export class SongService {
 
   search(term: string): Observable<Song[]> {
     return this.http
-      .get(`app/songs/?title=${term}`)
+      .get(`/api/songs/?title=${term}`)
       .map(response => response.json().data as Song[]);
   }
 
