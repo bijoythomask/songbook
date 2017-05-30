@@ -11,8 +11,6 @@ import {MdToolbarModule} from '@angular/material';
 import {MdListModule} from '@angular/material';
 import { RouterModule } from '@angular/router';
 
-
-
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './common/in-memory-data.service';

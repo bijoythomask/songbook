@@ -1,13 +1,10 @@
 <md-nav-list >
     <md-list-item *ngFor="let song of songs | async"> 
 
-        <button md-icon-button (click)="showInfo(link)">
-            <md-icon>info</md-icon>
-        </button>
-       
-        <a md-line href="...">{{song.title}}</a>
+     
+        <a [routerLink]="['details', song.id]"  md-line href="...">{{song.title}}</a>
 
-        <button md-icon-button (click)="gotoDetails(user.id)">
+        <button md-icon-button [routerLink]="['edit']" >
             <md-icon>edit</md-icon>
         </button>        
 
