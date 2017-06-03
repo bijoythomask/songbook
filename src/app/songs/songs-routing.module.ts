@@ -10,8 +10,8 @@ import { SongsDetailsComponent } from './songs-details/songs-details.component';
 const routes: Routes = [
   { path : 'songs', component : SongsComponent , children: [
         { path: '', component : SongListComponent },
-        { path: 'new', component : SongCreateComponent },
-        { path: 'edit', component : SongEditComponent },
+        { path: 'create', component : SongCreateComponent },
+        { path: 'edit/:id', component : SongEditComponent },
         { path: 'details/:id', component : SongsDetailsComponent }
         ]
   }

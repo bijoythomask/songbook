@@ -1,3 +1,32 @@
-<p>
-  song-create works!
-</p>
+<md-card class="md-card">
+<form class="song-edit-form" #heroForm="ngForm">
+	<md-card-header class="song-edit-table">
+		<md-card-title >
+			<md-input-container class="song-edit-table"> 
+				<input mdInput placeholder="Title" required [(ngModel)]="song.title" name="title">
+			</md-input-container>
+			<md-input-container class="song-edit-table"> 
+				<input mdInput placeholder="Language" [(ngModel)]="song.language" name="language">
+			</md-input-container>
+		</md-card-title>
+	</md-card-header>	
+	<md-card-content>	
+	<table class="song-edit-table" cellspacing="0" *ngFor="let verse of songVerse.verses">
+		<tr>
+			<td>
+				<md-input-container class="example-full-width">
+					<input mdInput placeholder="verse" [(ngModel)]="verse" name="verse"> 
+				</md-input-container></td>
+			<td>
+		</tr>
+	</table>
+
+	</md-card-content>
+	<md-card-actions>
+		<button md-raised-button>Save</button>
+		<button md-raised-button>Cancel</button>
+	</md-card-actions>
+
+</form>
+</md-card>
+

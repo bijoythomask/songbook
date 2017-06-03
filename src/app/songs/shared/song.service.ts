@@ -27,6 +27,14 @@ export class SongService {
       .catch(this.handleError);
   }
 
+  getSong(id: number): Promise<Song> {
+    const url = `${this.songsUrl}/${id}`;
+    return this.http.get(url)
+      .toPromise()
+      .then(response => response.json().data as Song)
+      .catch(this.handleError);
+  }
+
   search(term: string): Observable<Song[]> {
     return this.http
       .get(`/api/songs/?title=${term}`)
