@@ -10,17 +10,31 @@
 			</md-input-container>
 		</md-card-title>
 	</md-card-header>	
+	
 	<md-card-content>	
-	<table class="song-edit-table" cellspacing="0" *ngFor="let verse of songVerse.verses">
-		<tr>
-			<td>
-				<md-input-container class="example-full-width">
-					<input mdInput placeholder="verse" [(ngModel)]="verse" name="verse"> 
+	<table class="song-edit-table" cellspacing="0" >
+		<tr class="song-edit-table">
+			<td >
+				<md-input-container class="song-edit-table">
+					<textarea mdInput placeholder="chorus" [(ngModel)]="songVerse.chorus" name="chorus"> </textarea>
 				</md-input-container></td>
 			<td>
 		</tr>
-	</table>
-
+		<tr *ngFor="let verse of songVerse.verses; let i=index" class="song-edit-table">
+			<td >
+				<md-input-container class="song-edit-table">
+					<textarea mdInput placeholder="verse {{i+1}}" [(ngModel)]="songVerse.verses[i]" name="verse"> </textarea>
+				</md-input-container></td>
+			<td>
+		</tr>
+		<tr *ngFor="let verse of songVerse.verses; let i=index" class="song-edit-table">
+			<td >
+				<md-input-container class="song-edit-table">
+					<textarea mdInput placeholder="verse {{i+1}}" [(ngModel)]="songVerse.verses[i]" name="verse"> </textarea>
+				</md-input-container></td>
+			<td>
+		</tr>
+	</table>	
 	</md-card-content>
 	<md-card-actions>
 		<button md-raised-button>Save</button>

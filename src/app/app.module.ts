@@ -41,7 +41,8 @@ import { SongsModule } from "./songs/songs.module";
     SongsModule,
     RouterModule.forRoot([
       {path : 'user' , redirectTo : '/users'},
-      {path : 'songs', redirectTo : '/songs'}
+      {path : 'songs', redirectTo : '/songs'},
+      {path : '', redirectTo : '/songs' , pathMatch : 'full'}
     ])
   ],
   providers: [],
