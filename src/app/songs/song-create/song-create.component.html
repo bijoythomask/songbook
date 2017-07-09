@@ -1,3 +1,11 @@
+
+<md-toolbar color="primary">
+    <span>Create new song</span>
+    <span class="example-spacer"></span>
+    <md-icon class="example-icon">add</md-icon>
+    <md-icon class="example-icon">home</md-icon>
+</md-toolbar>
+
 <md-card class="md-card">
 <form class="song-edit-form" #heroForm="ngForm">
 	<md-card-header class="song-edit-table">
@@ -23,24 +31,20 @@
 		<tr *ngFor="let verse of songVerse.verses; let i=index" class="song-edit-table">
 			<td >
 				<md-input-container class="song-edit-table">
-					<textarea mdInput placeholder="verse {{i+1}}" [(ngModel)]="songVerse.verses[i]" name="verse"> </textarea>
+					<textarea mdInput placeholder="verse {{i+1}}" [(ngModel)]="songVerse.verses[i]" name="verse{{i}}"> </textarea>
 				</md-input-container></td>
 			<td>
 		</tr>
-		<tr *ngFor="let verse of songVerse.verses; let i=index" class="song-edit-table">
-			<td >
-				<md-input-container class="song-edit-table">
-					<textarea mdInput placeholder="verse {{i+1}}" [(ngModel)]="songVerse.verses[i]" name="verse"> </textarea>
-				</md-input-container></td>
-			<td>
-		</tr>
+		
 	</table>	
 	</md-card-content>
 	<md-card-actions>
 		<button md-raised-button>Save</button>
-		<button md-raised-button>Cancel</button>
+		<button md-raised-button (click)="cancelClicked()">Cancel</button>
 	</md-card-actions>
 
 </form>
+
+
 </md-card>
 

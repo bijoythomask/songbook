@@ -35,6 +35,10 @@ export class SongService {
       .catch(this.handleError);
   }
 
+  createSong(song: Song){
+    
+  }
+
   search(term: string): Observable<Song[]> {
     return this.http
       .get(`/api/songs/?title=${term}`)

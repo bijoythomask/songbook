@@ -2,6 +2,7 @@ import { Song } from '../shared/song';
 import { SongService } from '../shared/song.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-songs-details',
@@ -14,7 +15,8 @@ export class SongsDetailsComponent implements OnInit {
 
   constructor(private songService: SongService,
         private router: Router,
-        private activateRoute: ActivatedRoute) { 
+        private activateRoute: ActivatedRoute,
+        private _location: Location) { 
   
   }
 
@@ -22,6 +24,10 @@ export class SongsDetailsComponent implements OnInit {
         this.activateRoute.params
           .switchMap((params: Params) => this.songService.getSong(+params['id']))
           .subscribe(song => this.song = song);
+  }
+
+  cancleClicked(){
+    this._location.back();
   }
 
 }
